@@ -1,14 +1,13 @@
 package lk.ijse.spring.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonGetter;
+import lombok.*;
 
 import javax.persistence.Id;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
 @Data
 @ToString
 public class CustomerDTO {
@@ -22,4 +21,6 @@ public class CustomerDTO {
     private String userName;
     private String password;
     //private CustomerUserAccDTO customerUserAccDTO;
+
+
 }

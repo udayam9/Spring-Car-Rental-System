@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="carRentelSystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/carRentelSystem</output-path>
+    <root id="archive" name="carRentelSystem.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="jpa-descriptors" facet="Spring Car Rental Sysytem/jpa/JPA" />
+          <element id="module-output" name="Spring Car Rental Sysytem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.29" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.12.9" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Spring Car Rental Sysytem/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -29,7 +29,7 @@ public class JPAConfig {
     }
 
 
-    @Bean
+    @Bean 
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl("jdbc:mysql://localhost:3306/carRental?createDatabaseIfNotExist=true");
