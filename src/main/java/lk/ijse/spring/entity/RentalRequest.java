@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -24,13 +21,19 @@ public class RentalRequest {
     @ManyToOne
     private Customer customer;
 
-    @OneToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vehicleId", referencedColumnName = "vehicleId", nullable = false)
     private Vehicle vehicle;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "driverId", referencedColumnName = "driverId", nullable = false)
+    private Driver driver;
+
     private String pickupDateAndTime;
+//    private String pickupDateAndTime;
 
     @CreationTimestamp
-    private Date requestDateAndTime;
+    private Date Date;
 
     private String damagePaySlip;
 

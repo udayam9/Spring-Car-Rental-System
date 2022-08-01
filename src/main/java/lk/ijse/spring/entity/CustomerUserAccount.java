@@ -5,9 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +16,9 @@ public class CustomerUserAccount {
     @Id
     private String userName;
     private String password;
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
     private Customer customer;
 
 }

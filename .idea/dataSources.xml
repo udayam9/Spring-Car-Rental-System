@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="carrental@localhost" uuid="84ff69eb-0f83-4a6a-9cf7-3af32faad126">
+    <data-source source="LOCAL" name="car_rental_system@localhost" uuid="0fc059ff-91c5-486d-b254-f6905a2a87bc">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/carrental</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/car_rental_system</jdbc-url>
     </data-source>
   </component>
 </project>

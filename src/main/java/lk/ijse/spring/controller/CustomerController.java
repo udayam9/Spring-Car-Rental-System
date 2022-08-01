@@ -14,6 +14,11 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
+   @GetMapping
+    public void get(){
+       System.out.println("fdfdfffhtrrerwe435475nerwr");
+    }
+
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil registerCustomer(@RequestBody CustomerDTO customerDTO){
 

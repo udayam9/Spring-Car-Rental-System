@@ -2,29 +2,32 @@ package lk.ijse.spring.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Data
 @ToString
 @Entity
 public class Customer {
     @Id
-    private String id;
+    private String customerId;
     private String email;
     private String nic;
     private String drivingLicence;
     private String address;
     private String contactNumber;
 
-    @OneToMany(mappedBy = "customer")
-    private List<RentalRequest> rentalRequests = new ArrayList<RentalRequest>();
+    @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JoinColumn(name = "userName", referencedColumnName = "userName", nullable = false)
+    private CustomerUserAccount customerUserAccount;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<RentalRequest> rentalRequestsList = new ArrayList<RentalRequest>();
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<CarRent> carRentList = new ArrayList<CarRent>();
 
 }
