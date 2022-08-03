@@ -17,6 +17,7 @@ public class Customer {
     private String email;
     private String nic;
     private String drivingLicence;
+    private String licenceImg;
     private String address;
     private String contactNumber;
 
