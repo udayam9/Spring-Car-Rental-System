@@ -34,8 +34,6 @@ public class RentalRequest {
 
     @CreationTimestamp
     private Date Date;
+    private String status;
 
-    private String damagePaySlip;
-
-    private double rentPayment;
 }

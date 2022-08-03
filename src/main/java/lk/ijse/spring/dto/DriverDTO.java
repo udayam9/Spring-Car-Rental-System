@@ -1,9 +1,12 @@
 package lk.ijse.spring.dto;
 
+import lk.ijse.spring.entity.CarRent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,5 +22,6 @@ public class DriverDTO {
     private String username;
     private String password;
     private boolean availability = true;
+    private List<CarRent> rentals;
 
 }

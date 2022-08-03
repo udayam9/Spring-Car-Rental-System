@@ -20,10 +20,13 @@ public class Payment {
     private String accountNo;
     private String accountHolderName;
     private String bankName;
-    private String branchName;
     private double amount;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "rentID", referencedColumnName = "rentID",nullable = false)
     private CarRent rental;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId",nullable = false)
+    private Customer customer;
 }

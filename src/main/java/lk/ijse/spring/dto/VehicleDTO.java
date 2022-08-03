@@ -25,12 +25,13 @@ public class VehicleDTO {
     private double monthlyRate;
     private String freeMileageForMonth;
     private String priceForExtraKm;
-    private String registerNumber;
+    private String registrationNO;
     private double currentMileage;
     private String frontViewImg;
     private String backViewImg;
     private String sideViewImg;
     private String internalViewImg;
+    private String status;
     private final boolean availability = true;
     private List<CarRent> rentals;
     private List<Maintenance> maintenances;

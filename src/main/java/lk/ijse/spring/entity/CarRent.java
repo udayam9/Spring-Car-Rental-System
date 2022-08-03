@@ -26,6 +26,10 @@ public class CarRent {
     @JoinColumn(name = "returnId", referencedColumnName = "returnId", nullable = false)
     private CarRentReturn carRentReturn;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "requestId", referencedColumnName = "requestId", nullable = false)
+    private RentalRequest rentalRequest;
+
     @ManyToOne
     @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
     private Customer customer;

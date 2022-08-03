@@ -1,6 +1,7 @@
 package lk.ijse.spring.dto;
 
 import lk.ijse.spring.entity.CarRent;
+import lk.ijse.spring.entity.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,4 +21,5 @@ public class PaymentDTO {
     private String branchName;
     private double amount;
     private CarRent rental;
+    private Customer customer;
 }

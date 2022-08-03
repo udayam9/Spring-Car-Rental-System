@@ -31,12 +31,13 @@ public class Vehicle {
     private double monthlyRate;
     private String freeMileageForMonth;
     private String priceForExtraKm;
-    private String registerNumber;
+    private String registrationNO;
     private double currentMileage;
     private String frontViewImg;
     private String backViewImg;
     private String sideViewImg;
     private String internalViewImg;
+    private String status;
     private final boolean availability = true;
 
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)

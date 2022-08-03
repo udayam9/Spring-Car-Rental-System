@@ -20,6 +20,8 @@ public class Customer {
     private String licenceImg;
     private String address;
     private String contactNumber;
+    private String username;
+    private String password;
 
     @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
     @JoinColumn(name = "userName", referencedColumnName = "userName", nullable = false)
