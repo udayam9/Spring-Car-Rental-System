@@ -19,4 +19,6 @@ public interface CustomerRepo extends JpaRepository<Customer,String> {
     @Query(value = "UPDATE Customer SET licenceImg=:licenceImg WHERE customerId=:customerId", nativeQuery = true)
     void updateCustomerFilePaths( @Param("licenceImg") String licenceImg, @Param("customerId") String customerId);
 
+    @Query(value = "SELECT COUNT(customerId) FROM Customer",nativeQuery = true)
+    int countByCustomerId();
 }

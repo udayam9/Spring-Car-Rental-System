@@ -51,6 +51,14 @@ public class CustomerServiceImpl implements CustomerService {
         return mapper.map(repo.findAll(), new TypeToken<List<CustomerDTO>>() {
         }.getType());
     }
+    @Override
+    public CustomerDTO searchCustomer(String customerId) {
+        if (repo.existsById(customerId)) {
+            return mapper.map(repo.findById(customerId).get(), CustomerDTO.class);
+        } else {
+            throw new RuntimeException("No Such Customer");
+        }
+    }
 
     @Override
     public void deleteCustomer(String customerId) {
@@ -135,5 +143,9 @@ public class CustomerServiceImpl implements CustomerService {
         } else {
             throw new RuntimeException("Customer Not Found");
         }
+    }
+    @Override
+    public int getCountOfCustomersRegistered() {
+        return repo.countByCustomerId();
     }
 }

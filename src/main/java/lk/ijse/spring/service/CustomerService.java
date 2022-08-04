@@ -9,6 +9,7 @@ public interface CustomerService {
     void saveCustomer(CustomerDTO var1);
     List<CustomerDTO> getAllCustomers();
     void deleteCustomer(String var1);
+    CustomerDTO searchCustomer(String customerId);
     void updateCustomer(CustomerDTO var1);
 //    List<CarDTO> viewCars();
 //    void rentalRequest(RentalRequestDTO var1);
@@ -20,4 +21,5 @@ public interface CustomerService {
     public boolean findCustomerByPassword(String password);
     public CustomerDTO findCustomerByUsernameAndPassword(String username, String password);
     public void uploadCustomerImages(String photoPath,String id);
+    int getCountOfCustomersRegistered();
 }
