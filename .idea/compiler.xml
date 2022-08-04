@@ -8,8 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringCarRental" />
-        <module name="BackEnd" />
+        <module name="Spring Car Rental Sysytem" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BackEnd" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
