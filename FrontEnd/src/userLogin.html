@@ -5,8 +5,66 @@
     <title>Easy Car Rental | Login Page</title>
     <link rel="stylesheet" href="assets/css/UserLogin.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="assets/css/HomePage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/gwb0rvj.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
+<STYLE>
+    .aside__area {
+        position: relative;
+        width: var(--aside-area-width);
+        height: 100%;
+        background-color: rgb(133 52 0 / 71%);
+        border-radius: 5px;
+        opacity: 1;
+    }
+    .nav{
+        top: 0;
+        width: 100%;
+        height: 60px;
+        backdrop-filter: blur(20px);
+        background: rgb(197 82 0 / 64%);
+        position: fixed;
+        z-index: 100;
+        box-shadow: 0 2px 6px 2px rgba(0,0,0,0.31) ;
+    }
+    .nav div.logo a {
+        text-decoration: none;
+        color: #fdfeff;
+        font-size: 42px;
+        font-weight: bold;
+        top: -22px;
+        position: relative;
+    }
+</STYLE>
 <body>
+<nav class="nav">
+
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">EASY Car Rentals</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="index.html" class="font-monospace">Home</a></li>
+                <li><a href="#about-us"class="font-monospace">About us</a></li>
+                <li><a href="#cars"class="font-monospace">Vehicles</a></li>
+                <li><a href="tel:0766552208"class="font-monospace">Contact</a></li>
+
+
+            </ul>
+        </div>
+        <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+    </div>
+</nav>
 
 <!-- Wrapper Area -->
 <div class="wrapper__area" id="wrapper_Area">

@@ -31,6 +31,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void saveCustomer(CustomerDTO customer) {
         if (!repo.existsById(customer.getCustomerId())){
+            customer.setCustomerId(getNewId());
 
             repo.save(mapper.map(customer,Customer.class));
 
@@ -111,7 +112,7 @@ public class CustomerServiceImpl implements CustomerService {
             id = "C00-" + tempId;
         }
     } else {
-        id = "C00-0001";
+        id = "C00-001";
     }
         return id;
 

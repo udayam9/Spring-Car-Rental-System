@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("customer")
+@RequestMapping("api/v1/customer")
 @CrossOrigin
 public class CustomerController {
     @Autowired
@@ -48,6 +48,7 @@ public class CustomerController {
 
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil searchCustomer(@PathVariable String id) {
+        System.out.println("kjfjifjoifsfisjfdisjfjfisdidfsjddfsjifdifdjfisdjf");
         return new ResponseUtil(200, "Ok", service.searchCustomer(id));
     }
 
